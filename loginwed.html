@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="styleLoginwed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a><img src="/img/logo-sach(29).png"></a>
+                    <a href="loginwed.html" class="name">VN.COM</a>
+                </div>
+                <ul>
+
+
+                    <li><a href="loginwed.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                    <li><a href="profile.html"><i class="fa-solid fa-newspaper"></i>Liên hệ</a></li>
+                    <li class="li_dropdown" ><a id="nameUser" href="#" onclick="login()"><i class="fa-solid fa-user-tag"></i>Đăng nhập</a>
+                        <ul id="dropdown" class="dropdown">
+                            <li><a href="">Thông tin tài khoản</a></li>
+                            <li><a href="">Lịch sử câu hỏi</a></li>
+                            <li><a href="">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+
+
+    <div class="login" id="login">
+        <div class="left">
+            <h2>Chào bạn <i class="fa-solid fa-handshake" id="iconh2"></i></h2>
+            <h3>Bạn đang đăng nhập vào trang wed đặt câu hỏi, giải đáp thắc mắc</h3>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-sharp fa-solid fa-envelopes-bulk"></i></a>
+            </div>
+            <h4>Giải đáp thắc mắc !</h4>
+        </div>
+
+        <form action="" class="form">
+            <button id="close" onclick="closeLogin()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="title">
+                <h2>Đăng nhập</h2>
+            </div>
+
+            <div class="input">
+                <input type="text" class="username" id="username" placeholder="Username">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input">
+                <input type="password" class="password" id="password" placeholder="Password">
+                <i class="fa-solid fa-eye" id="eyePassword" onclick="showpassword()"></i>
+            </div>
+
+            <div class="forget">
+                <a href="">Quên mật khẩu</a>
+            </div>
+
+            <div class="btn">
+                <button onclick="checkAccount()">Đăng nhập</button>
+            </div>
+
+
+        </form>
+
+    </div>
+
+    <div class="container" id="container">
+
+        <h1>Phần mềm đặt câu hỏi , và duyệt câu hỏi html,css,js </h1>
+
+        <div class="pageContainer">
+            <div class="bt1">
+                <a href="#"><button type="submit"><i class="fa-solid fa-qrcode"></i>Thông tin trang web</button></a>
+            </div>
+            <div class="bt2">
+                <a href="#"><button id="CheckQuestion" onclick="check()" type="submit"><i
+                            class="fa-solid fa-clipboard-question"></i>Đặt
+                        câu hỏi</button></a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <footer>
+        <div class="footer-left">
+            <p>Nền tảng phát triển wed<br> 4 Tháng 9, 2023</p>
+        </div>
+        <div class="footer-right">
+            <p>Nguyễn Khánh Duy ,Phạm Quốc Anh © Khoa Công nghệ thông tin - ĐHSPHN 2023 </p>
+        </div>
+    </footer>
+
+    <script src="checkUserOnline.js"></script>
+    <script src="login.js"></script>
+
+</body>
+
+</html>
