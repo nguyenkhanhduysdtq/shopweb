@@ -13,10 +13,16 @@ var userAccount = [];
 var user = JSON.parse(localStorage.getItem("userOnline"));
 
 
-if (user.userAdmin == admin.userAdmin && user.passwordAdmin == admin.passwordAdmin) {
-    var titleAdmin = document.getElementById("CheckQuestion");
-    titleAdmin.innerHTML = '<i class="fa-solid fa-clipboard-question"></i>' + "Xem câu hỏi";
+
+
+if (user != null) {
+    if (user.userAdmin == admin.userAdmin && user.passwordAdmin == admin.passwordAdmin) {
+        var titleAdmin = document.getElementById("CheckQuestion");
+        titleAdmin.innerHTML = '<i class="fa-solid fa-clipboard-question"></i>' + "Xem câu hỏi";
+    }
 }
+
+
 
 
 
