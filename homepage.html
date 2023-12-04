@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học</title>
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="styleHeader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a><img src="/img/logo-sach(29).png"></a>
+                    <a href="loginwed.html" class="name">VN.COM</a>
+                </div>
+                <ul>
+
+
+                    <li><a href="loginwed.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                    <li><a href="profile.html"><i class="fa-solid fa-newspaper"></i>Liên hệ</a></li>
+                    <li class="li_dropdown"><a id="nameUser" href="#" onclick="login()"><i
+                                class="fa-solid fa-user-tag"></i>Đăng nhập</a>
+                        <ul id="dropdown" class="dropdown">
+                            <li><a href="">Thông tin tài khoản</a></li>
+                            <li><a href="">Lịch sử câu hỏi</a></li>
+                            <li><a onclick="outLogin()" href="">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+
+
+    <h1>Đặt câu hỏi</h1>
+
+    <div class="container">
+        <div class="Contenthtml">
+            <h2>Đặt câu hỏi html</h2>
+            <button type="submit" id="html"><img src="/img/anh1.jpg" alt="anh bi loi"></button>
+        </div>
+        <div class="Contentcss">
+            <h2>Đặt câu hỏi css</h2>
+            <button type="submit" id="css"><img src="/img/ảnh2.jpg" alt="anh bi loi"></button>
+        </div>
+        <div class="Contentjs">
+            <h2>Đặt câu hỏi javascript</h2>
+            <button type="submit" id="js" ><img src="/img/anh3.jpg" alt="anh bi loi"></button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <p>Nền tảng phát triển wed<br> 11 Tháng 1, 2022</p>
+        </div>
+        <div class="footer-right">
+            <p>All rights reserved by © Khoa Công nghệ thông tin - ĐHSPHN 2023 </p>
+        </div>
+    </footer>
+
+
+
+    <script src="login.js"></script>
+    <script src="checkUserOnline.js"></script>
+
+</body>
+
+
+</html>

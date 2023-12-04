@@ -22,11 +22,12 @@
 
                     <li><a href="loginwed.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
                     <li><a href="profile.html"><i class="fa-solid fa-newspaper"></i>Liên hệ</a></li>
-                    <li class="li_dropdown" ><a id="nameUser" href="#" onclick="login()"><i class="fa-solid fa-user-tag"></i>Đăng nhập</a>
+                    <li class="li_dropdown"><a id="nameUser" href="#" onclick="login()"><i
+                                class="fa-solid fa-user-tag"></i>Đăng nhập</a>
                         <ul id="dropdown" class="dropdown">
                             <li><a href="">Thông tin tài khoản</a></li>
                             <li><a href="">Lịch sử câu hỏi</a></li>
-                            <li><a href="">Đăng xuất</a></li>
+                            <li><a onclick="outLogin()" href="">Đăng xuất</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -52,19 +53,19 @@
             <h4>Giải đáp thắc mắc !</h4>
         </div>
 
-        <form action="" class="form">
-            <button id="close" onclick="closeLogin()"><i class="fa-solid fa-xmark"></i></button>
+        <form action="" class="form  box-login" id="form-login">
+            <button id="close-login" onclick="closeLogin()"><i class="fa-solid fa-xmark"></i></button>
             <div class="title">
                 <h2>Đăng nhập</h2>
             </div>
 
             <div class="input">
-                <input type="text" class="username" id="username" placeholder="Username">
+                <input type="text" class="username" id="username" placeholder="Tài khoản">
                 <i class="fa-solid fa-user"></i>
             </div>
 
             <div class="input">
-                <input type="password" class="password" id="password" placeholder="Password">
+                <input type="password" class="password" id="password" placeholder="Mật khẩu">
                 <i class="fa-solid fa-eye" id="eyePassword" onclick="showpassword()"></i>
             </div>
 
@@ -75,6 +76,48 @@
             <div class="btn">
                 <button onclick="checkAccount()">Đăng nhập</button>
             </div>
+
+            <div class="btn-register">
+                <button onclick="register()">Đăng ký tài khoản</button>
+            </div>
+
+
+        </form>
+
+
+        <form action="" class="form box-register" id="form-register">
+            <button id="close" onclick="closeRegister()" class="close_register"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="title">
+                <h2>Đăng ký tài khoản</h2>
+            </div>
+
+            <div class="input">
+                <input type="text" class="username" id="name-account" placeholder="Họ và tên">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input">
+                <input type="text" class="username" id="username-register" placeholder="Tài khoản">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input">
+                <input type="password" class="password" id="password-register" placeholder="Mật khẩu">
+
+            </div>
+
+            <div class="input">
+                <input type="password" class="password" id="password-commit-register" placeholder="Xác nhận mật khẩu">
+
+            </div>
+
+
+            <div class="btn">
+                <button onclick="checkRegister()">Đăng ký</button>
+            </div>
+
+
 
 
         </form>

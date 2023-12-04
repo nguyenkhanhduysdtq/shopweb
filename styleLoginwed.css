@@ -129,6 +129,8 @@ nav .menu>ul>li>a:hover {
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
     padding-top: 80px;
 
+
+
 }
 
 .left h2 {
@@ -173,6 +175,32 @@ nav .menu>ul>li>a:hover {
     background: linear-gradient(to right, #00adef, #0ef);
     color: black;
 
+
+}
+
+.box-register {
+    position: relative;
+    top: -32px;
+    transform: translateX(400px);
+    display: none;
+
+}
+
+.close_register {
+    margin-top: 32px;
+}
+
+/* kiểm tra chuyển trang sang register */
+
+.box-login.active {
+    display: none;
+}
+
+
+.box-register.active {
+    position: relative;
+    top: -32px;
+    display: inline;
 
 }
 
@@ -233,7 +261,7 @@ nav .menu>ul>li>a:hover {
 }
 
 .forget a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -253,6 +281,19 @@ nav .menu>ul>li>a:hover {
     cursor: pointer;
 }
 
+
+.form .btn-register button {
+    margin-top: 20px;
+    width: 180px;
+    margin-left: 135px;
+    height: 20px;
+    color: white;
+    background: linear-gradient(to right, #e5463b, #0ef);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
 #close {
     position: absolute;
     top: 0;
@@ -269,6 +310,26 @@ nav .menu>ul>li>a:hover {
 }
 
 #close:hover {
+    background-color: red;
+    border: 1px solid red;
+}
+
+#close-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom-left-radius: 12px;
+    width: 45px;
+    height: 35px;
+}
+
+#close-login i {
+    color: white;
+    font-size: 20px;
+}
+
+#close-login:hover {
     background-color: red;
     border: 1px solid red;
 }
