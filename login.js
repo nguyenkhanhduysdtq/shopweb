@@ -84,7 +84,25 @@ function checkAccount() {
         var index = checkAccountExist(username.value, password.value);
         var userExist = [];
 
+        //tạo mang danh sách lưu câu hỏi 
+        if (JSON.parse(localStorage.getItem("array_question")) == null) {
+
+            var array = [];
+            localStorage.setItem("array_question", JSON.stringify(array));
+
+        }
+
+        if (JSON.parse(localStorage.getItem("array_question_show")) == null) {
+
+            var array_show = [];
+            localStorage.setItem("array_question_show", JSON.stringify(array_show));
+        }
+
+
+
         userExist = JSON.parse(localStorage.getItem("userAccount"));
+
+
 
         localStorage.setItem("userOnline", JSON.stringify(userExist[index]));
         var nameUser = document.getElementById("nameUser");
@@ -111,7 +129,12 @@ function check() {
     if (JSON.parse(localStorage.getItem("userOnline")) == null) {
         alert("Bạn chưa đăng nhập");
     } else {
-        window.location.href = "homepage.html";
+        var accountOnline = JSON.parse(localStorage.getItem("userOnline"));
+        if (accountOnline.userAdmin == null) {
+            window.location.href = "homepage.html";
+        } else {
+            window.location.href = "pageadmin.html";
+        }
     }
 }
 
@@ -120,10 +143,6 @@ function check() {
 function outLogin() {
     localStorage.setItem("userOnline", null);
     alert("Bạn đã dăng xuất ");
-    window.location.href = "loginwed.html";
-
-
-
 }
 
 function register() {

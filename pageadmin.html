@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylehistory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <h1>Môn học Nền tảng phát triển web-Quản lý câu hỏi của người dùng</h1>
+    <div class="menu">
+        <div class="navg">
+            <a href="loginwed.html"><button class="home" type="submit"><i class="fa-solid fa-house"></i>Trang
+                    chủ</button></a>
+            <a href="homepage.html"><button class="pr" type="submit"><i class="fa-solid fa-arrow-left"></i>Trang
+                    trước</button></a>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown">
+                <a href="formquestion.html"><button class="dropbtn">Thêm câu hỏi</button></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h2>Danh sách câu hỏi</h2>
+
+        <table border="1" cellspacing="0" id="tbContent">
+            <!-- <tr>
+                <th>STT</th>
+                <th>Tên câu hỏi</th>
+                <th>Loại câu hỏi</th>
+                <th>Đáp án</th>
+                <th>Trạng thái</th>
+                <th>Xem Thông tin</th>
+            </tr> -->
+
+
+        </table>
+
+    </div>
+
+
+    <div class="container_form" id="container-more">
+        <button onclick="closeForm()" id="close">Đóng</button>
+        <h3 style="margin-bottom: 40px;">THÔNG TIN CÂU HỎI</h3>
+        <p class="title">* Nhập nội dung câu hỏi !</p>
+        <input id="ip-content" class="ip-content" type="text" placeholder="Nọi dung câu hỏi" required>
+        <p style="margin-top: 30px;">ảnh cho câu hỏi !</p>
+        <input style="margin-bottom: 30px;" type="file">
+        <div class="Container-option">
+            <p>Dạng câu hỏi !</p>
+            <div class="option-radio">
+                <div class="radio">
+                    <input id="raddio-type" type="radio" checked>
+                    <p class="_1">Dạng Chọn đáp án đúng</p>
+                </div>
+
+                <div class="radio">
+                    <input type="radio" disabled>
+                    <p class="_1">Dạng Điền đáp án đúng</p>
+                </div>
+            </div>
+            <div class="number-answers">
+                <p>Số đáp án :</p>
+                <input type="number" value="4">
+            </div>
+
+            <h3>Nhập đáp án </h3>
+            <div class="question">
+
+                <div class="A">
+                    <p class="title">* Đáp án A </p>
+                    <input id="A" class="answer" type="text" placeholder="Nhập đáp án A" required>
+                    <input id="contactChoice1" class="select-radio" name="contact" type="radio" value="A">
+
+
+                </div>
+                <div class="B">
+                    <p class="title">* Đáp án B </p>
+                    <input id="B" class="answer" type="text" placeholder="Nhập đáp án B" required>
+                    <input id="contactChoice2" class="select-radio" name="contact" type="radio" value="B">
+
+                </div>
+                <div class="C">
+                    <p class="title">* Đáp án C</p>
+                    <input id="C" class="answer" type="text" placeholder="Nhập đáp án C" required>
+                    <input id="contactChoice3" class="select-radio" name="contact" type="radio" value="C">
+
+                </div>
+                <div class="D">
+                    <p class="title">* Đáp án D </p>
+                    <input id="D" class="answer" type="text" placeholder="Nhập đáp án D" required>
+                    <input id="contactChoice4" class="select-radio" name="contact" type="radio" value="D">
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <button id="add-question" onclick="updateQuestionMore()" class="add-question">Cập nhật</button>
+
+    </div>
+
+    <div class="container_form" id="container-input">
+        <button onclick="closeForm()" id="close">Đóng</button>
+        <h3 style="margin-bottom: 40px;">THÔNG TIN CÂU HỎI</h3>
+        <p class="title">* Nhập nội dung câu hỏi !</p>
+        <input class="ip-content" id="ip-content-input" type="text" placeholder="Nọi dung câu hỏi">
+        <p style="margin-top: 30px;">ảnh cho câu hỏi !</p>
+        <input class="ip-file" type="file">
+        <div class="Container-option">
+            <p>Dạng câu hỏi !</p>
+            <div class="option-radio">
+                <div class="radio">
+                    <input type="radio" disabled>
+                    <p class="_1">Dạng Chọn đáp án đúng</p>
+                </div>
+
+                <div class="radio">
+                    <input type="radio" checked>
+                    <p class="_1">Dạng Điền đáp án đúng</p>
+                </div>
+            </div>
+
+
+            <h3>Nhập đáp án </h3>
+            <div class="question">
+
+                <div class="A">
+                    <p class="title">* Đáp án</p>
+                    <input class="answer" id="answer-input" type="text" placeholder="Nhập đáp án">
+                </div>
+
+                <button onclick="updateQuestionInput()" class="add-question" id="add-question-input">Cập nhật</button>
+
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="value-array-show">
+    <input type="hidden" id="value-array-question">
+
+
+    <script src="addquestion.js"></script>
+
+</body>
+
+</html>

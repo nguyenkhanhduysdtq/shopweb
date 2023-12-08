@@ -1,0 +1,237 @@
+.home,
+.pr {
+    width: 100px;
+    height: 35px;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.home:hover {
+    background-color: blue;
+}
+
+.pr:hover {
+    background-color: blue;
+}
+
+h1 {
+    margin-bottom: 40px;
+    width: 1000px;
+}
+
+i {
+    margin-right: 5px;
+}
+
+h2 {
+    margin-top: 80px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+
+}
+
+table th {
+    height: 35px;
+    background-color: rgb(7, 7, 72);
+    color: white;
+
+}
+
+td {
+    text-align: center;
+    font-weight: 500;
+    height: 40px;
+}
+
+#btn_show {
+    width: 80px;
+    height: 38px;
+    background-color: rgb(23, 133, 23);
+    color: white;
+    border: none;
+}
+
+#btn_show:hover {
+    background-color: green;
+}
+
+#btn_delete {
+    width: 80px;
+    height: 38px;
+    background-color: rgb(234, 88, 88);
+    color: white;
+    border: none;
+
+}
+
+#btn_delete:hover {
+    background-color: red;
+
+}
+
+#btn_update {
+    width: 80px;
+    height: 38px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+}
+
+#btn_update:hover {
+    background-color: blue;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropbtn {
+    background-color: #0d6efd;
+    color: white;
+    padding: 16px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: blue;
+}
+
+
+.show-bg {
+    background-color: #7CFC00;
+    border: none;
+    color: black;
+}
+
+#activity {
+    width: 350px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+.container_form {
+    position: relative;
+    right: -20%;
+    top: 50px;
+    display: none;
+
+}
+
+.active {
+    display: block;
+}
+
+.ip-content {
+    width: 1000px;
+    height: 37px;
+}
+
+.number-answers {
+    display: flex;
+}
+
+.number-answers input {
+    height: 20px;
+    width: 100px;
+    margin-top: 18px;
+    margin-left: 30px;
+}
+
+h3 {
+    margin-top: 50px;
+    width: 950px;
+    text-align: center;
+}
+
+.option-radio {
+    display: flex;
+}
+
+.option-radio .radio {
+    display: flex;
+    margin-right: 50px;
+
+}
+
+p {
+    font-weight: bold;
+}
+
+._1 {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.question .answer {
+    width: 1000px;
+    height: 37px;
+}
+
+.select-radio {
+    width: 100px;
+}
+
+.add-question {
+    width: 1010px;
+    height: 37px;
+    margin-top: 30px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    border: none;
+}
+
+.add-question:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+
+
+.title::first-letter {
+    color: red;
+}
+
+.active {
+    display: block;
+}
+
+#close {
+    width: 100px;
+    height: 37px;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+}
+
+#status-question {
+    width: 100px;
+    height: 37px;
+}

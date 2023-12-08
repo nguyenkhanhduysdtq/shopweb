@@ -1,0 +1,194 @@
+body {
+    background: url("/img/college\ students-rafiki.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: 700px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-position-x: 50%;
+    background-position-y: 30px;
+
+
+
+
+}
+
+i {
+    margin-right: 5px;
+}
+
+.home,
+.pr {
+    width: 100px;
+    height: 35px;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.home:hover {
+    background-color: blue;
+}
+
+.pr:hover {
+    background-color: blue;
+}
+
+h1 {
+    margin-bottom: 40px;
+    width: 1000px;
+}
+
+.container {
+    position: relative;
+    right: -20%;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.ip-content {
+    width: 1000px;
+    height: 37px;
+}
+
+.number-answers {
+    display: flex;
+}
+
+.number-answers input {
+    height: 20px;
+    width: 100px;
+    margin-top: 18px;
+    margin-left: 30px;
+}
+
+h3 {
+    margin-top: 50px;
+    width: 950px;
+    text-align: center;
+}
+
+.option-radio {
+    display: flex;
+}
+
+.option-radio .radio {
+    display: flex;
+    margin-right: 50px;
+
+}
+
+p {
+    font-weight: bold;
+}
+
+._1 {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.question .answer {
+    width: 1000px;
+    height: 37px;
+}
+
+.select-radio {
+    width: 100px;
+}
+
+.add-question {
+    width: 1010px;
+    height: 37px;
+    margin-top: 30px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+
+.add-question:hover {
+    background-color: blue;
+
+}
+
+
+
+.title::first-letter {
+    color: red;
+}
+
+input {
+    font-size: 16px;
+}
+
+.ip-file {
+    margin-bottom: 30px;
+}
+
+#content-input {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropbtn {
+    background-color: #0d6efd;
+    color: white;
+    padding: 16px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.dropdown-content a:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: blue;
+}
