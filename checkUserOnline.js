@@ -16,10 +16,12 @@ function login() {
     var login = document.getElementById("login");
     var container = document.getElementById("container");
     var dropdown = document.getElementById("dropdown");
+    var homepage = document.getElementById("homePage");
 
     if (checkAccountOnline == null) {
         login.classList.add("active");
         container.classList.add("close_container");
+        homepage.classList.add("close_homePage");
     } else {
         if (check_click == true) {
             dropdown.classList.add("show");

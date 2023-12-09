@@ -92,15 +92,19 @@ function resetStatus(index) {
     var array_show = JSON.parse(localStorage.getItem("array_question_show"));
 
     if (array_show[index].status === "Chưa duyệt") {
-        confirm("Bạn muốn duyệt câu hỏi này !");
-        array_show[index].status = "Đã Duyệt";
-        array_show[index].color = "#7CFC00";
+        if (confirm("Bạn muốn duyệt câu hỏi này !")) {
+            array_show[index].status = "Đã Duyệt";
+            array_show[index].color = "#7CFC00";
+
+        }
 
 
     } else {
-        confirm("Bạn muốn hủy duyệt câu hỏi này !");
-        array_show[index].status = "Chưa duyệt";
-        array_show[index].color = "rgb(226, 7, 7)";
+        if (confirm("Bạn muốn hủy duyệt câu hỏi này !")) {
+            array_show[index].status = "Chưa duyệt";
+            array_show[index].color = "rgb(226, 7, 7)";
+
+        }
 
 
     }

@@ -5,8 +5,14 @@ const admin = {
     passwordAdmin: "123456",
 }
 // khai bào mảng các tài khoản người dùng
+var userAccount;
 
-var userAccount = [];
+if (JSON.parse(localStorage.getItem("userAccount")) == null) {
+    userAccount = [];
+} else {
+    userAccount = JSON.parse(localStorage.getItem("userAccount"));
+}
+
 
 
 
@@ -60,8 +66,10 @@ function showpassword() {
 function closeLogin() {
     var login = document.getElementById("login");
     var container = document.getElementById("container");
+    var homepage = document.getElementById("homePage");
     login.classList.remove("active");
     container.classList.remove("close_container");
+    homepage.classList.remove("close_homePage");
 }
 
 
