@@ -1,91 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url("img/nui.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: bottom;
-
-}
-
-header {
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.8);
-}
-
-/* nav {
-    background-color: rgba(0, 0, 0, 0.4);
-} */
-
-nav .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    background-image: linear-gradient(135deg, #1D6FA3 10%, #65FDF0 100%);
-}
-
-li>i {
-    padding-right: 5px;
-    color: black;
-    cursor: pointer;
-}
-
-li>i:hover {
-    color: rgb(232, 166, 166);
-}
-
-nav .menu .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 250px;
-}
-
-nav .menu .logo img {
-    width: 110px;
-}
-
-nav .menu .logo .name {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-nav .menu>ul {
-    display: flex;
-    list-style: none;
-    margin-right: 250px;
-}
-
-nav .menu>ul li>i {
-    color: #000;
-}
-
-nav .menu>ul li a {
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: #000;
-    width: 50px;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 5px;
-}
-
-/* nav .menu>ul li a:hover {
-    color: #fff;
-} */
-
-
-nav .menu>ul>li>a:hover {
-    background-color: #1D6FA3;
-    color: #fff;
-}
-
 .login {
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
@@ -374,23 +286,25 @@ nav .menu>ul>li>a:hover {
 
 footer {
     position: relative;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
     background-color: rgba(0, 0, 0, 0.4);
-    border: 2px solid black;
-    color: white;
+    width: 100%;
+    bottom: 0;
     text-align: center;
-    top: 630px;
-
+    color: white;
+    display: block;
 }
 
-.footer p {
-    margin: 0 !important;
+.footer-right p {
     color: white;
-    text-align: center;
     font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 16px 0;
 }
+
+.reset-footer {
+    top: 630px;
+}
+
 
 .dropdown {
     position: absolute;
@@ -463,7 +377,7 @@ footer {
 
 .homePage__content {
     padding-bottom: 100px;
-    background-image: url('./img/bgr_js.jpg');
+    /* background-image: url('./img/bgr_js.jpg'); */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

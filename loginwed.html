@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="styleLoginwebcopy.css">
+    <link rel="stylesheet" href="styleHeader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -17,16 +18,14 @@
                     <a><img src="/img/logo-sach(29).png"></a>
                     <a href="loginwed.html" class="name">VN.COM</a>
                 </div>
-                <ul>
-
-
-                    <li><a href="loginwed.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
-                    <li><a href="profile.html"><i class="fa-solid fa-newspaper"></i>Liên hệ</a></li>
+                <ul id="menu-content">
+                    <li class="_1-li"><a href="loginwed.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                    <li class="_1-li"><a href="formContact.html"><i class="fa-solid fa-newspaper"></i>Liên hệ</a></li>
                     <li class="li_dropdown"><a id="nameUser" href="#" onclick="login()"><i
                                 class="fa-solid fa-user-tag"></i>Đăng nhập</a>
                         <ul id="dropdown" class="dropdown">
                             <li><a href="">Thông tin tài khoản</a></li>
-                            <li><a href="historyquestion.html">Lịch sử câu hỏi</a></li>
+                            <li><a id="histoty-question" href="historyquestion.html">Lịch sử câu hỏi</a></li>
                             <li><a onclick="outLogin()" href="">Đăng xuất</a></li>
                         </ul>
                     </li>
@@ -205,10 +204,7 @@
     </div>
 
 
-    <footer>
-        <div class="footer-left">
-            <p>Nền tảng phát triển wed<br> 4 Tháng 9, 2023</p>
-        </div>
+    <footer id="footer">
         <div class="footer-right">
             <p>Nguyễn Khánh Duy ,Phạm Quốc Anh © Khoa Công nghệ thông tin - ĐHSPHN 2023 </p>
         </div>

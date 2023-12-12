@@ -79,18 +79,9 @@ footer {
     text-align: center;
 }
 
-footer {
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 2px solid black;
-    color: white;
-    text-align: center;
-}
 
 .footer p {
-    margin: 0 !important;
+    margin: 0 ;
     color: white;
     text-align: center;
     font-family: 'Nunito', sans-serif;

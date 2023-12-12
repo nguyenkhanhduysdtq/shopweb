@@ -26,6 +26,17 @@ function addQuestion() {
 
     var userOnline = JSON.parse(localStorage.getItem("userOnline"));
 
+    var date = new Date();
+    var date = new Date();
+    var hours = date.getHours();
+    var Minutes = date.getMinutes();
+    var Second = date.getSeconds();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    var time_date = `${hours}:${Minutes}:${Second}\n ${day}/${month}/${year}`;
+
 
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
@@ -60,7 +71,8 @@ function addQuestion() {
             answer_D: answer_D.value,
             ex_answer: ex_value,
             username: userOnline.username,
-            color: "rgb(226, 7, 7)"
+            color: "rgb(226, 7, 7)",
+            date: time_date
         };
 
         var content_question_show = {
@@ -69,7 +81,8 @@ function addQuestion() {
             status: status,
             ex_answer: ex_value,
             username: userOnline.username,
-            color: "rgb(226, 7, 7)"
+            color: "rgb(226, 7, 7)",
+            date: time_date
         };
 
 
@@ -138,6 +151,15 @@ function addQuestionInput() {
     var type_question = "Điền";
 
     var userOnline = JSON.parse(localStorage.getItem("userOnline"));
+    var date = new Date();
+    var hours = date.getHours();
+    var Minutes = date.getMinutes();
+    var Second = date.getSeconds();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    var time_date = `${hours}:${Minutes}:${Second}\n ${day}/${month}/${year}`;
 
     if (question.value != "" && answer.value != "") {
         var content_question_show = {
@@ -146,7 +168,8 @@ function addQuestionInput() {
             status: status,
             ex_answer: answer.value,
             username: userOnline.username,
-            color: "rgb(226, 7, 7)"
+            color: "rgb(226, 7, 7)",
+            date: time_date
         };
 
         var array_question_show = JSON.parse(localStorage.getItem("array_question_show"));

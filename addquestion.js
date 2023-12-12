@@ -12,6 +12,7 @@ function render() {
     <th>Tên câu hỏi</th>
     <th>Loại câu hỏi</th>
     <th>Đáp án</th>
+    <th>Ngày tạo</th>
     <th>Trạng thái</th>
     <th>Xem Thông tin</th>
 </tr>`
@@ -24,6 +25,7 @@ function render() {
     <td>${array_show[i].name_question}</td>
     <td>${array_show[i].type_question}</td>
     <td>${array_show[i].ex_answer}</td>
+    <td>${array_show[i].date}</td>
     <td style="background-color: ${array_show[i].color}" id="status">${array_show[i].status}</td>
     <td id="activity">
     <a><button id="btn_show" onclick="showQuestion(${i})">Xem</button></a>
@@ -49,6 +51,7 @@ function renderAdmin() {
     <th>Tên câu hỏi</th>
     <th>Loại câu hỏi</th>
     <th>Tên tài khoản</th>
+    <th>Ngày tạo</th>
     <th>Trạng thái</th>
     <th>Xem Thông tin</th>
 </tr>`
@@ -61,6 +64,7 @@ function renderAdmin() {
     <td>${array_show[i].name_question}</td>
     <td>${array_show[i].type_question}</td>
     <td>${array_show[i].username}</td>
+    <td>${array_show[i].date}</td>
     <td><button style="background-color: ${array_show[i].color}" id="status-question" onclick="resetStatus(${i})">${array_show[i].status}</button></td>
     <td id="activity">
     <a><button id="btn_show" onclick="showQuestion(${i})">Xem</button></a>
@@ -120,13 +124,21 @@ function resetStatus(index) {
 
 function deleteQuestion(index) {
     var array_show = JSON.parse(localStorage.getItem("array_question_show"));
+
+
     if (confirm("Bạn đang muốn xóa câu hỏi ?")) {
         array_show.splice(index, 1);
     }
 
     localStorage.setItem("array_question_show", JSON.stringify(array_show));
 
-    render();
+    if (userOnline.userAdmin == null) {
+        render();
+
+    } else {
+        renderAdmin();
+    }
+
 
 
 }

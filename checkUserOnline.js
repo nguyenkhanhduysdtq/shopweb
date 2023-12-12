@@ -17,11 +17,13 @@ function login() {
     var container = document.getElementById("container");
     var dropdown = document.getElementById("dropdown");
     var homepage = document.getElementById("homePage");
+    var footer = document.getElementById("footer");
 
     if (checkAccountOnline == null) {
         login.classList.add("active");
         container.classList.add("close_container");
         homepage.classList.add("close_homePage");
+        footer.classList.add("reset-footer");
     } else {
         if (check_click == true) {
             dropdown.classList.add("show");
