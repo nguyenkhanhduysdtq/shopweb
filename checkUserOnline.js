@@ -19,6 +19,7 @@ function login() {
     var homepage = document.getElementById("homePage");
     var footer = document.getElementById("footer");
 
+
     if (checkAccountOnline == null) {
         login.classList.add("active");
         container.classList.add("close_container");

@@ -153,6 +153,7 @@ function check() {
 function outLogin() {
     localStorage.setItem("userOnline", null);
     alert("Bạn đã dăng xuất ");
+
 }
 
 function register() {

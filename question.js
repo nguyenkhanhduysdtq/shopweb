@@ -37,6 +37,15 @@ function addQuestion() {
 
     var time_date = `${hours}:${Minutes}:${Second}\n ${day}/${month}/${year}`;
 
+    var name = "";
+
+    if (userOnline.userAdmin == null) {
+
+        name = userOnline.username;
+    } else {
+        name = "admin";
+    }
+
 
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
@@ -70,7 +79,7 @@ function addQuestion() {
             answer_C: answer_C.value,
             answer_D: answer_D.value,
             ex_answer: ex_value,
-            username: userOnline.username,
+            username: name,
             color: "rgb(226, 7, 7)",
             date: time_date
         };
@@ -80,7 +89,7 @@ function addQuestion() {
             type_question: type_question,
             status: status,
             ex_answer: ex_value,
-            username: userOnline.username,
+            username: name,
             color: "rgb(226, 7, 7)",
             date: time_date
         };
@@ -161,13 +170,22 @@ function addQuestionInput() {
 
     var time_date = `${hours}:${Minutes}:${Second}\n ${day}/${month}/${year}`;
 
+    var name = "";
+
+    if (userOnline.userAdmin == null) {
+
+        name = userOnline.username;
+    } else {
+        name = "admin";
+    }
+
     if (question.value != "" && answer.value != "") {
         var content_question_show = {
             name_question: question.value,
             type_question: type_question,
             status: status,
             ex_answer: answer.value,
-            username: userOnline.username,
+            username: name,
             color: "rgb(226, 7, 7)",
             date: time_date
         };

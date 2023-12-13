@@ -34,10 +34,13 @@ function render() {
     </td>
 </tr>`
 
+
+
         }
+
+        table.innerHTML = question;
     }
 
-    table.innerHTML = question;
 }
 
 
@@ -360,6 +363,5 @@ function updateQuestionMore() {
     alert("Cập nhật thanh công");
 
     check();
-
 
 }
