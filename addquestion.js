@@ -82,13 +82,17 @@ function renderAdmin() {
 
 
 
-if (userOnline.userAdmin == null) {
+function check() {
+    if (userOnline.userAdmin == null) {
 
-    render();
+        render();
 
-} else {
-    renderAdmin();
+    } else {
+        renderAdmin();
+    }
 }
+
+check();
 
 
 function resetStatus(index) {
@@ -132,12 +136,7 @@ function deleteQuestion(index) {
 
     localStorage.setItem("array_question_show", JSON.stringify(array_show));
 
-    if (userOnline.userAdmin == null) {
-        render();
-
-    } else {
-        renderAdmin();
-    }
+    check();
 
 
 
@@ -231,6 +230,9 @@ function updateQuestion(index) {
 
     document.getElementById("value-array-show").value = index;
 
+    document.getElementById("add-question-input").style.display = "block";
+    document.getElementById("add-question").style.display = "block";
+
 
 
     if (type === "Điền") {
@@ -241,9 +243,11 @@ function updateQuestion(index) {
         document.getElementById("answer-input").value = array_show[index].ex_answer;
 
 
+
     } else {
         container_more.classList.add("active");
         container_input.classList.remove("active");
+
 
 
         for (var i = 0; i < array_question.length; i++) {
@@ -253,6 +257,13 @@ function updateQuestion(index) {
                 document.getElementById("B").value = array_question[i].answer_B;
                 document.getElementById("C").value = array_question[i].answer_C;
                 document.getElementById("D").value = array_question[i].answer_D;
+
+
+                document.getElementById("ip-content").readOnly = false;
+                document.getElementById("A").readOnly = false;
+                document.getElementById("B").readOnly = false;
+                document.getElementById("C").readOnly = false;
+                document.getElementById("D").readOnly = false;
 
 
                 if (array_question[i].ex_answer === document.getElementById("A").value) {
@@ -287,7 +298,8 @@ function updateQuestionInput() {
 
     localStorage.setItem("array_question_show", JSON.stringify(array_show));
     alert("Cập nhật thanh công");
-    render();
+
+    check();
 
 
 }
@@ -338,6 +350,7 @@ function updateQuestionMore() {
     array_question[index].answer_D = document.getElementById("D").value;
     array_question[index].ex_answer = ex_value;
 
+
     array_show[index_input].name_question = document.getElementById("ip-content").value;
     array_show[index_input].ex_answer = ex_value;
 
@@ -345,7 +358,8 @@ function updateQuestionMore() {
     localStorage.setItem("array_question", JSON.stringify(array_question));
     localStorage.setItem("array_question_show", JSON.stringify(array_show));
     alert("Cập nhật thanh công");
-    render();
+
+    check();
 
 
 }
