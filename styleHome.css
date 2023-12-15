@@ -88,30 +88,4 @@ footer {
 
 }
 
-.dropdown {
-    position: absolute;
-    list-style: none;
-    top: 119px;
-    right: 80px;
-    background-color: rgba(0, 0, 0, 0.4);
-    width: auto;
-    padding-left: 0px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    display: none;
 
-}
-
-.dropdown>li {
-    padding: 12px;
-
-}
-
-.dropdown>li>a:hover {
-    background-color: #00adef;
-
-}
-
-.show {
-    display: block;
-}

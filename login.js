@@ -185,22 +185,29 @@ function checkRegister() {
     var password = document.getElementById("password-register");
     var password2 = document.getElementById("password-commit-register");
 
-    var user_register = {
-        name: name.value,
-        username: usernname.value,
-        password: password.value,
+    if (password.value != password2.value) {
+        alert("Mật khẩu xác nhận không đúng ! mời nhập lại")
+    } else {
+
+        var user_register = {
+            name: name.value,
+            username: usernname.value,
+            password: password.value,
+        }
+        userAccount.push(user_register);
+
+        localStorage.setItem("userAccount", JSON.stringify(userAccount));
+        alert("Bạn đăng ký tài khoản thành công");
+
+        name.value = "";
+        usernname.value = "";
+        password.value = "";
+        password2.value = "";
+
+        closeRegister();
+
     }
-    userAccount.push(user_register);
 
-    localStorage.setItem("userAccount", JSON.stringify(userAccount));
-    alert("Bạn đăng ký tài khoản thành công");
-
-    name.value = "";
-    usernname.value = "";
-    password.value = "";
-    password2.value = "";
-
-    closeRegister();
 
 
 }
