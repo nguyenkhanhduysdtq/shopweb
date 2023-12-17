@@ -202,7 +202,7 @@ function checkRegister() {
 
     if (password.value != password2.value) {
         alert("Mật khẩu xác nhận không đúng ! mời nhập lại")
-    } else if (name == "" || usernname == "" || password == "" || password2 == "") {
+    } else if (name.value == "" || usernname.value == "" || password.value == "" || password2.value == "") {
         alert("Bạn không được để trống");
     } else {
 

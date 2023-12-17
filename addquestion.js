@@ -85,17 +85,17 @@ function renderAdmin() {
 
 
 
-function check() {
-    if (userOnline.userAdmin == null) {
 
-        render();
+if (userOnline.userAdmin == null) {
 
-    } else {
-        renderAdmin();
-    }
+    render();
+
+} else {
+    renderAdmin();
 }
 
-check();
+
+
 
 
 function resetStatus(index) {
@@ -139,7 +139,13 @@ function deleteQuestion(index) {
 
     localStorage.setItem("array_question_show", JSON.stringify(array_show));
 
-    check();
+    if (userOnline.userAdmin == null) {
+
+        render();
+
+    } else {
+        renderAdmin();
+    }
 
 
 
@@ -303,9 +309,18 @@ function updateQuestionInput() {
 
 
     localStorage.setItem("array_question_show", JSON.stringify(array_show));
+
+    if (userOnline.userAdmin == null) {
+
+        render();
+
+    } else {
+        renderAdmin();
+    }
+
     alert("Cập nhật thanh công");
 
-    check();
+
 
 
 }
@@ -363,8 +378,17 @@ function updateQuestionMore() {
 
     localStorage.setItem("array_question", JSON.stringify(array_question));
     localStorage.setItem("array_question_show", JSON.stringify(array_show));
+
+    if (userOnline.userAdmin == null) {
+
+        render();
+
+    } else {
+        renderAdmin();
+    }
+
     alert("Cập nhật thanh công");
 
-    check();
+
 
 }
