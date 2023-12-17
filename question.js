@@ -7,7 +7,7 @@ function addQuestion() {
     // dạng câu hỏi
     var type_question = "Chọn";
 
-    var status = "Chưa duyệt";
+    var status = "";
     //dáp án A
 
     var answer_A = document.getElementById("A");
@@ -38,12 +38,19 @@ function addQuestion() {
     var time_date = `${hours}:${Minutes}:${Second}\n ${day}/${month}/${year}`;
 
     var name = "";
+    var color = "";
+
 
     if (userOnline.userAdmin == null) {
 
         name = userOnline.username;
+        status = "Chưa duyệt";
+        color = "rgb(226, 7, 7)";
+
     } else {
         name = "admin";
+        status = "Đã Duyệt";
+        color = "#7CFC00";
     }
 
 
@@ -80,7 +87,7 @@ function addQuestion() {
             answer_D: answer_D.value,
             ex_answer: ex_value,
             username: name,
-            color: "rgb(226, 7, 7)",
+            color: color,
             date: time_date
         };
 
@@ -90,7 +97,7 @@ function addQuestion() {
             status: status,
             ex_answer: ex_value,
             username: name,
-            color: "rgb(226, 7, 7)",
+            color: color,
             date: time_date
         };
 
@@ -154,7 +161,7 @@ function addQuestionInput() {
     //đáp án đúng
     var answer = document.getElementById("answer-input");
 
-    var status = "Chưa duyệt";
+    var status = "";
 
     //loại câu hỏi 
     var type_question = "Điền";
@@ -171,12 +178,19 @@ function addQuestionInput() {
     var time_date = `${hours}:${Minutes}:${Second}\n ${day}/${month}/${year}`;
 
     var name = "";
+    var color = "";
+
 
     if (userOnline.userAdmin == null) {
 
         name = userOnline.username;
+        status = "Chưa duyệt";
+        color = "rgb(226, 7, 7)";
+
     } else {
         name = "admin";
+        status = "Đã Duyệt";
+        color = "#7CFC00";
     }
 
     if (question.value != "" && answer.value != "") {
@@ -186,7 +200,7 @@ function addQuestionInput() {
             status: status,
             ex_answer: answer.value,
             username: name,
-            color: "rgb(226, 7, 7)",
+            color: color,
             date: time_date
         };
 

@@ -85,6 +85,21 @@ function checkAccount() {
 
         nameUser.innerHTML = '<i class="fa-solid fa-user-tag"></i>' + admin.name;
 
+        //tạo mang danh sách lưu câu hỏi 
+        if (JSON.parse(localStorage.getItem("array_question")) == null) {
+
+            var array = [];
+            localStorage.setItem("array_question", JSON.stringify(array));
+
+        }
+
+        if (JSON.parse(localStorage.getItem("array_question_show")) == null) {
+
+            var array_show = [];
+            localStorage.setItem("array_question_show", JSON.stringify(array_show));
+        }
+
+
         alert("Bạn đã đăng nhập thành công ,");
 
         closeLogin();
