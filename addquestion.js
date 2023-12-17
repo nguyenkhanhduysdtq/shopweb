@@ -242,6 +242,9 @@ function updateQuestion(index) {
         container_input.classList.add("active");
         container_more.classList.remove("active");
 
+        document.getElementById("ip-content-input").readOnly = false;
+        document.getElementById("answer-input").readOnly = false;
+
         document.getElementById("ip-content-input").value = array_show[index].name_question;
         document.getElementById("answer-input").value = array_show[index].ex_answer;
 
