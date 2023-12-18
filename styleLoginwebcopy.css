@@ -302,7 +302,7 @@ footer {
 }
 
 .reset-footer {
-    top: 630px;
+    display: none;
 }
 
 
